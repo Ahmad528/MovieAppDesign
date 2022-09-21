@@ -1,0 +1,997 @@
+html,body{
+    height: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(21, 21, 21);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    height: 50px;
+    display: flex;
+    padding: 0 5rem;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(128,128,128,0.4);
+}
+.header button{
+    color: aliceblue;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#inp{
+    width: 25rem;
+    position: relative;
+    padding: 5px 15px;
+    color: rgb(61,61,61);
+    background: aliceblue;
+    outline: none;
+    border: none;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.search{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search button{
+    position: absolute;
+    right: 0;
+    color: white;
+    background: plum;
+    font-size: 14px;
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+.logo{
+    color: plum;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* menu list */
+.menu-list{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -20rem;
+    background: rgba(10,10,10,0.9);
+    z-index: 2;
+    padding: 1rem 8rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    transition: all 0.5s ease-in-out;
+}
+.menu-list p{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(252,228,91);
+}
+.menu-list a{
+    display: block;
+    text-decoration: none;
+    color: aliceblue;
+    margin: 1rem 0;
+    font-size: 18px;
+}
+.menu-list button{
+    position: absolute;
+    margin: auto;
+    bottom: 0.5rem;
+    background: rgba(0,0,0,0.5);
+    padding: 9px 15px;
+    border-radius: 50%;
+    left: 45%;
+}
+.toggle-menu{
+    top: 0;
+}
+
+/* login page */
+.login-page{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url('./login-bg.jpg');
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-card{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0,0,0,0.6);
+    padding: 2rem 5rem;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+.login-card p{
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: 600;
+}
+.login-card img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin: 1rem auto;
+}
+.login-card input{
+    margin: 1rem 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid gray;
+    font-size: 18px;
+    outline: none;
+    font-weight: 100;
+    color: rgb(172,172,172);
+}
+.login-card button{
+    background: rgb(56,148,252);
+    margin: 0.5rem 0;
+    color: white;
+    padding: 7px 0;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.signin{
+    background: aliceblue !important;
+    color: black !important;
+}
+.forgot{
+    text-align: left;
+    color: rgb(46,46,255);
+    font-weight: 500;margin-top: 0.5rem;
+}
+.toggle-signin{
+    visibility: hidden;
+}
+
+
+/* landing page */
+.page1{
+    height: calc(100% - 90px);
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-column-gap: 2rem;
+    padding: 0 5rem;
+    margin: 1rem 0;
+    position: relative;
+}
+.slider{
+    position: relative;
+}
+.title p{
+    font-size: 22px;
+    font-weight: 600;
+    color: gold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 0;
+}
+.title div{
+    width: 5rem;
+    height: 4px;
+    background: gold;
+    border-radius: 5px;
+}
+.parent-box{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.box1{
+    height: 100%;
+    width: 500%;
+    box-shadow: inset 0 -120px 32px 0px rgb(21, 21, 21);
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    animation: slide 20s infinite;
+    animation-delay: 0;
+}
+@keyframes slide {
+    15%{
+        left: 0;
+    }
+    20%{
+        left: -100%;
+    }
+    35%{
+        left: -100%;
+    }
+    40%{
+        left: -200%;
+    }
+    55%{
+        left: -200%;
+    }
+    60%{
+        left: -300%;
+    }
+    75%{
+        left: -300%;
+    }
+    80%{
+        left: -400%;
+    }
+    95%{
+        left: -400%;
+    }
+    100%{
+        left: 0;
+    }
+}
+.slider-elements{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px);
+    margin-top: 2rem;
+    
+}
+.slider-elements img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.img-desc{
+    color: aliceblue;
+    position: absolute;
+    bottom: 10px;
+    padding: 0;
+}
+.new-trailer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.new-trailer button{
+    border: 1px solid white;
+    background: none;
+    padding: 8px 11px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 2rem;
+    color: white
+}
+
+/* trending */
+.trending{
+    color: white;
+}
+.trending-elements{
+    margin-top: 1rem;
+}
+.elements-body{
+    display: flex;
+    margin: 10px 0;
+}
+.trend-desc p:first-child{
+    font-size: 18px;
+    color: aliceblue;
+    font-weight: 500;
+}
+.trend-desc p{
+    color: rgb(172,172,172);
+}
+.trend-img{
+    width: 8rem;
+    height: 5rem;
+    margin-right: 15px;
+}
+
+/* streaming now */
+.streaming-now{
+    margin: 3rem 0;
+    padding: 0 5rem;
+    color: white;
+}
+.divider-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.see-more{
+    cursor: pointer;
+}
+.see-more p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.see-more div{
+    width: 2.5rem;
+    height: 2px;
+    float: right;
+    border-radius: 0;
+}
+.streaming-card{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-column-gap: 1rem;
+    margin: 3rem 0;
+}
+.streaming-card-body{
+    height: 22rem;
+    position: relative;
+    cursor: pointer;
+}
+.streaming-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+.streaming-card-body div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stream-play{
+    border: 2px solid gold;
+    padding: 16px 20px;
+    border-radius: 50%;
+    color: gold;
+    animation: fadeaway 2s infinite;
+    animation-timing-function: linear;
+}
+@keyframes fadeaway{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.streaming-name{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1rem 0.5rem;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* popular movies */
+.popular-movies{
+    margin: 3rem 0;
+    padding: 0 5rem;
+    color: aliceblue;
+    position: relative;
+}
+.popular-elements{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-column-gap: 1rem;
+}
+.movies-card{
+    background: rgba(10,10,10,0.7);
+    height: max-content;
+    padding: 5px;
+    border-radius: 1rem;
+    position: relative;
+}
+.movie-img{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    z-index: 1;
+    cursor: pointer;
+}
+.movie-img i{
+    color: gold;
+}
+.movie-img p{
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    margin: 5px 10px;
+    background: rgba(0,0,0,0.735);
+    border-radius: 15px;
+    padding: 1px 10px;
+    color: aliceblue;
+}
+.movie-name{
+    font-size: 20px;
+}
+.movie-img img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    z-index: 0;
+}
+.card-action{
+    margin: 15px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.card-action button{
+    background: none;
+    border: none;
+    padding: 0.3rem 1rem;
+    border: 1px solid rgb(253, 228, 91);
+    color: rgb(253, 228, 91);
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.your-rating{
+    position: absolute;
+    z-index: 1;
+    bottom: 3.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(60,60,60,0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    width: max-content;
+}
+.your-rating div{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 1rem;
+    border-radius: 10px;
+}
+.your-rating i{
+    cursor: pointer;
+    color: gold;
+}
+.submit-rating, .submit-review{
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 0.5rem;
+    display: block;
+    color: salmon;
+    cursor: pointer;
+    font-size: 14px;
+}
+.open-rating{
+    visibility: hidden;
+}
+.toggle-rating-btn{
+    color: aliceblue;
+}
+
+/* card details */
+.popular-card-details{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(21, 21, 21);
+    z-index: 1;
+    visibility: hidden;
+    padding: 3rem 6rem;
+    color: aliceblue;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.popular-card-details-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+    position: relative;
+    margin-top: 1rem;
+}
+.img-container{
+    position: relative;
+    height: 20rem;
+}
+.card-content-img{
+    position: relative;
+}
+.close-card-detail{
+    background: rgba(60,60,60,0.7);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem 3rem;
+    font-size: larger;
+    cursor: pointer;
+}
+.details-title{
+    display: flex;
+    align-items: center;
+}
+.details-title div{
+    width: 5px;
+    background: gold;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.details-name{
+    font-size: 25px;
+    font-weight: 600;
+    color: gold;
+}
+.popular-card-name, .related-photos p{
+    margin: 2rem 0;
+    font-size: 20px;
+    color: gold;
+}
+.popular-card-desc{
+    font-size: 18px;
+}
+.card-1{
+    background: rgb(65,65,65);
+    padding: 0.5rem;
+    border-radius: 3px;
+}
+.card-content-img{
+    position: relative;
+}
+.card-content-img img{
+    position: absolute;
+    width: 100%;
+    height: 20rem;
+}
+.popular-cast, .popular-language, .popular-release{
+    margin-top: 1rem;
+}
+.watch-from-details{
+    border: none;
+    padding: 8px 15px;
+    background: gold;
+    margin-top: 2rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.watch-from-details:hover{
+    background: aliceblue;
+}
+.popular-info{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 0.5rem 0;
+}
+.user-action{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 1rem 0;
+    grid-column-gap: 0.1rem;
+    margin-bottom: 0;
+}
+.user-action p{
+    font-weight: 500;
+}
+.user-action .your-rating{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 1rem 0;
+    width: auto;
+    padding-top: 1rem;
+    text-align: center;
+    background: rgb(54,54,54);
+}
+.movie-review{
+    background: rgb(65,65,65);
+    padding: 0.5rem;
+    border-radius: 3px;
+    position: relative;
+    overflow-y: auto;
+    height: 11rem;
+}
+.review-header{
+    margin: 0.3rem 0;
+}
+.submit-review{
+    margin: 0.3rem auto;
+    border: none;
+    color: blueviolet;
+    cursor: pointer;
+    padding: 3px;
+    font-weight: 500;
+}
+.viewers-review{
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    border-bottom: 1px solid rgb(49,49,49);
+    padding: 5px;
+}
+.viewers-review p{
+    font-weight: 100;
+    font-size: 16px;
+}
+.review-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.review-btn{
+    background: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: gold;
+    border: 1px solid gold;
+    cursor: pointer;
+}
+.viewers-review img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: relative;
+}
+.review-date{
+    float: right;
+}
+.review-box{
+    position: absolute;
+    z-index: 1;
+    background: rgba(255,255,255,0.8);
+    top: 3rem;
+    right: 0;
+    backdrop-filter: blur(2px);
+    padding: 0.5rem;
+    border-radius: 3px;
+    visibility: hidden;
+}
+.review-box-toggle{
+    visibility: visible;
+}
+.your-review{
+    overflow-y: auto;
+    background: none;
+    color: rgb(88,88,88);
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    resize: none;
+    border: 1px solid rgb(217,174,253);
+}
+.related-photos p{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+.image-card{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 0.5rem;
+}
+.image-card div{
+    position: relative;
+}
+.image-card img{
+    width: 100%;
+    height: 15rem;
+}
+.show{
+    visibility: visible;
+}
+
+/*Top Artists */
+.artists{
+    margin: 3rem 0;
+    padding: 0 5rem;
+    color: aliceblue;
+}
+.artists-card{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.artist-card-body{
+    text-align: center;
+    margin: 0 0.8rem;
+}
+.artist-card-body img{
+    width: 13rem;
+    height: 13rem;
+    background: plum;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px rgba(59,59,59,0.7);
+    cursor: pointer;
+}
+.artist-card-body p:nth-child(odd){
+    color: gold;
+    font-size: 14px;
+}
+.artist-name{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* artists card details */
+.artists-profile{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url('./images/artists/artist1.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 1rem;
+    padding: 3rem 15rem;
+    overflow: auto;
+    visibility: hidden;
+}
+.close-btn{
+    position: fixed;
+    top: 1rem;
+    right: 5rem;
+    background: none;
+    color: aliceblue;
+    padding: 8px 15px;
+    font-size: 20px;
+    background: rgba(128,128,128,0.45);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.actors-profile-content{
+    height: 100%;
+    text-align: center;
+}
+.artist-img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background: lightblue;
+    margin: 0.5rem 0;
+    margin-top: 2rem;
+}
+.art-info{
+    font-weight: 500;
+    font-size: 17px;
+    color: aliceblue;
+}
+.art-dob{
+    color: white;
+    font-weight: 200;
+}
+.art-des{
+    margin-top: 1rem;
+    font-size: 20px;
+    line-height: 1.8rem;
+    font-weight: 200;
+}
+.read-more{
+    background: none;
+    padding: 5px 10px;
+    border: 1px solid gold;
+    font-size: 17px;
+    font-weight: 100;
+    color: gold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+.art-media-handle{
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+.follow-artist{
+    margin-top: 1rem;
+    text-align: center;
+}
+.follow-artist a{
+    margin: 0 1rem;
+}
+.follow-artist img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.follow-artist a:hover img{
+    transform: scale(1.5);
+    transition: all 0.5s ease-in-out;
+}
+.achievements-card-body{
+    text-align: center;
+    margin: 2rem 0;
+}
+.achievements-card-body i{
+    color: gold;
+}
+.a-num{
+    font-size: 25px;
+    font-weight: 600;
+    color: aliceblue;
+    margin: 0.3rem 0;
+}
+.actors-movies{
+    margin-top: 3rem;
+    background: rgba(49,49,49,0.2);
+    padding-bottom: 2rem;
+}
+.actors-movies-card{
+    display: flex;
+    background: rgba(49,49,49,0.2);
+    padding: 0.3rem;
+    align-items: center;
+    margin: 0.1rem 2rem;
+    cursor: pointer;
+}
+.actors-movies-card img{
+    width: 9rem;
+    height: 4rem;
+}
+.actors-movies-card div{
+    margin: 0 0.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.actors-movies-card:hover img{
+    transform: scale(3);
+    transition: all 0.5s ease-in-out;
+}
+.actor-movie-name{
+    font-size: 18px;
+    font-weight: 500;
+    color: aliceblue;
+}
+.actors-movies a{
+    position: relative;
+    top: 0.7rem;
+    text-decoration: none;
+    color: gold;
+    font-weight: 500;
+    border-bottom: 1px solid gold;
+}
+.toggleArtists{
+    visibility: visible;
+}
+
+
+/* upcoming movies */
+.upcoming-movies{
+    margin: 3rem 0;
+    padding: 0 5rem;
+    color: aliceblue;
+}
+.upcoming-card{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+    padding-bottom: 1rem;
+}
+.upcoming-card-body{
+    height: 16rem;
+    position: relative;
+    box-shadow: inset 0 -55px 32px 0px rgb(21, 21, 21);
+}
+.upcoming-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.upcoming-desc{
+    position: absolute;
+    bottom: 0;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.upcoming-name{
+    font-size: 20px;
+    font-weight: 500;
+}
+.release-date{
+    font-size: 14px;
+    color: gray;
+    font-weight: 500;
+}
+
+/* web series */
+.web-series{
+    margin: 3rem 0;
+    padding: 0 5rem;
+    color: aliceblue;
+}
+.web-series-card{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 1rem;
+}
+.series-card-body{
+    height: 16rem;
+    position: relative;
+    cursor: pointer;
+}
+.series-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.series-name{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 500;
+    bottom: 0;
+    padding: 0.5rem;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+}
+
+/* footer section */
+.movies-footer{
+    padding: 5rem 10rem;
+    color: aliceblue;
+    height: 100%;
+    background: rgb(47,56,61);
+}
+.footer-connect{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.footer-media-handle{
+    font-size: 25px;
+    font-weight: 500;
+}
+.footer-connect p{
+    margin-bottom: 2rem; 
+}
+.footer-connect a{
+    margin: 2rem;
+    color: aliceblue;
+}
+.footer-note{
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.footer-note p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.footer-note a{
+    display: block;
+    margin: 1rem 0;
+    color: aliceblue;
+}
+.copyright{
+    text-align: center;
+    font-size: 18px;
+}

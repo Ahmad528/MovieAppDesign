@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Player</title>
+
+    <!-- font awesome icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            background: rgb(18, 31, 40);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: aliceblue;
+            padding: 3rem 0;
+        }
+        .movie-container{
+            width: 70%;
+            background: rgba(84,121,121,0.2);
+            position: relative;
+        }
+        video{
+            width: 100%;
+        }
+        .v-header{
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 15px;
+            width: 100%;
+            box-shadow: inset 0 30px 20px rgba(0,0,0,0.8);
+            color: aliceblue;
+            z-index: 1;
+            opacity: 0;
+            
+        }
+        .movie-container:hover .v-header{
+            opacity: 1;
+        }
+        .v-header-info{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .movie-name{
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .video-desc{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            justify-content: space-between;
+            margin: 5px;
+            align-items: center;
+        }
+        .m-info{
+            margin: 10px;
+            margin-bottom: 1.5rem;
+            line-height: 1.7rem;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="movie-container">
+        <div class="v-header">
+            <p class="movie-name">Movie name</p>
+            <div class="v-header-info">
+                <span>Thriller</span>
+                <b>.</b>
+                <span>U/A</span>
+            </div>
+        </div>
+        <video controls>
+            <source src="/myvideo.mp4" type="video/mp4">
+        </video>
+        <div class="video-desc">
+            <div>
+                <p class="movie-name">Movie name</p>
+                <p>26 Aug, 2012</p>
+            </div>
+            <div class="extra-info">
+                <span>277k views</span>
+                <b>.</b>
+                <span>English</span>
+                <b>.</b>
+                <span><i class="fa fa-star-o"></i> 5.7/10</span>
+            </div>
+        </div>
+        <p class="m-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum minus deserunt labore consequuntur ratione illum porro quae tempora a repellat ipsum aspernatur, doloribus, enim eos quidem! Itaque incidunt voluptatem doloribus.</p>
+    </div>
+</body>
+</html>
