@@ -1,4 +1,4 @@
-# movie-app-web-design
+# movie-app-design
 Youtube video link : https://youtu.be/oYPPB7YRSh0
 
 Some screenshots of the project...
